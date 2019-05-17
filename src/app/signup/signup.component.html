@@ -1,0 +1,33 @@
+<div class="container">
+  <form [formGroup]="data">
+    <h2>Sign up</h2>
+    <div>
+      <label for="email">Email address</label>
+      <input type="text" formControlName="email">
+      <div *ngIf="data.controls['email'].invalid && data.controls['email'].touched" class="alert-danger">
+        Please enter a valid email
+      </div>
+    </div>
+    <div>
+      <label for="password">Password</label>
+      <input type="password" formControlName="password">
+      <div *ngIf="data.controls['password'].invalid && data.controls['password'].touched" class="alert-danger">
+        The password must contain at least 6 characters
+      </div>
+    </div>
+    <div>
+      <label for="confirmPassword">Confirm password</label>
+      <input type="password" formControlName="confirmPassword">
+      <div *ngIf="data.controls['confirmPassword'].value != data.controls['password'].value && data.controls['confirmPassword'].touched" class="alert-danger">
+        The passwords don't match
+      </div>
+    </div>
+    <button (click)="signup()" [disabled]="data.invalid || data.controls['confirmPassword'].value != data.controls['password'].value">Sign up</button>
+    <div *ngIf="error" class="alert-danger">
+      {{ error }}
+    </div>
+    <div class="alert-dark">
+      <a routerLink="/login">Click here</a> to login
+    </div>
+  </form>
+</div>

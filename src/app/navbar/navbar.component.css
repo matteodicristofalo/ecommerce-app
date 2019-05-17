@@ -1,0 +1,170 @@
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+.active {
+    display: block;
+}
+
+nav {
+    padding: 20px 0;
+    background: #24292e;
+    box-shadow: 0 1px 3px #00000040;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.navbar-toggler {
+    display: none;
+    position: absolute;
+    margin-left: 15px;
+}
+
+.navbar-toggler span {
+    display: block;
+    height: 3px;
+    margin: 7px 0;
+    background: #fff;
+}
+
+.navbar-toggler span:nth-child(1) {
+    width: 25px;
+}
+
+.navbar-toggler span:nth-child(2) {
+    width: 15px;
+}
+
+.navbar-toggler span:nth-child(3) {
+    width: 25px;
+}
+
+h1 {
+    float: left;
+    margin: 0 0 0 125px;
+}
+
+ul {
+    float: right;
+    margin: 0 50px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+li {
+    display: inline-block;
+    margin-right: 25px;
+    padding: 7px;
+}
+
+li a {
+    color: #e1e1e1;
+    font-size: 17px;
+}
+
+li a:hover {
+    color: #fff;
+}
+
+.dropdown-li {
+    padding: 0;
+}
+
+.dropdown-menu {
+  position: relative;
+}
+
+.dropdown-toggler {
+    display: block;
+    padding-bottom: 10px;
+    padding-right: 50px;
+}
+
+.dropdown-items {
+  position: absolute;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 3px 3px #00000040;
+  z-index: 1;
+}
+
+.dropdown-items a {
+  display: block;
+  margin: 15px 0;
+  padding: 5px 0 5px 15px;
+  color: #2f2f2f;
+}
+
+.dropdown-items a:hover {
+    background: #f7f7f7;
+    color: initial;
+    transition: .5s;
+}
+
+@media (max-width: 768px) {
+
+    .navbar-toggler {
+        display: block;
+    }
+
+    h1 {
+        float: none;
+        margin: 0;
+        text-align: center;
+        font-size: 30px;
+    }
+
+    ul {
+        display: none;
+        float: none;
+        width: 100%;
+        margin: 50px 0 0 0;
+        padding: 0;
+    }
+
+    li {
+        display: block;
+        margin: 25px 0;
+        padding-left: 15px;
+        font-size: 17px;
+    }
+
+    li a {
+        font-size: 20px;
+    }
+
+    .dropdown-toggler {
+        padding-left: 15px;
+    }
+
+    .dropdown-menu {
+        width: 100%;
+    }
+
+    .dropdown-items {
+        position: relative;
+        padding: 10px 0;
+        background: #2b3137;
+        box-shadow: none;
+    }
+
+    .dropdown-items a {
+        margin: 0;
+        padding: 20px 25px;
+        color: #e1e1e1;
+    }
+
+    .dropdown-items a:hover {
+        background: transparent;
+        color: #fff;
+    }
+
+}

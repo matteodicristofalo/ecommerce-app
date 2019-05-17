@@ -1,0 +1,39 @@
+.container {
+    width: 40%;
+    margin: 75px auto;
+    padding: 50px;
+    background: #f7f7f7;
+}
+
+h2 {
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+
+a {
+    text-decoration: none;
+    color: #2979ce;
+}
+
+button {
+    margin-bottom: 10px;
+}
+
+@media (min-width: 415px) and (max-width: 812px) {
+
+    .container {
+       width: 75%;
+       margin: 50px auto;
+    }
+
+}
+
+@media (max-width: 414px) {
+
+    .container {
+       width: 75%;
+       margin: 25px auto;
+       background: #fff;
+    }
+    
+}

@@ -1,0 +1,18 @@
+<div class="container" *ngIf="product">
+  <div class="grid">
+    <div class="col">
+      <img src="../../assets/images/{{ product.id }}.jpg">
+    </div>
+    <div class="col">
+      <div class="title">
+        <h2>{{ product.make }} {{ product.model }}</h2>
+      </div>
+      <div class="description">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt fuga accusamus minima incidunt nobis expedita animi nisi doloremque amet architecto ipsum commodi suscipit, aliquid, magnam numquam soluta iure cupiditate quae.
+      </div>
+      <div class="price">{{ product.price }} €</div>
+      <button (click)="addCart(product)">Add to cart</button>
+      <button>Buy now</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+<div class="container">
+  <form [formGroup]="data">
+    <h2>Login</h2>
+    <div>
+      <label for="email">Email address</label>
+      <input type="email" formControlName="email">
+      <div *ngIf="data.controls['email'].invalid && data.controls['email'].touched" class="alert-danger">
+        Please enter an email
+      </div>
+    </div>
+    <div>
+      <label for="password">Password</label>
+      <input type="password" formControlName="password">
+      <div *ngIf="data.controls['password'].invalid && data.controls['password'].touched" class="alert-danger">
+        Please enter a password
+      </div>
+    </div>
+    <button (click)="login()" [disabled]="data.invalid">Login</button>
+    <div *ngIf="error" class="alert-danger">
+        {{ error }}
+    </div>
+    <div class="alert-dark">
+        <a routerLink="/signup">Click here</a> to sign up
+    </div>
+  </form>
+</div>

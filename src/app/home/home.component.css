@@ -1,0 +1,149 @@
+.cover {
+    position: relative;
+    height: 500px;
+    background-image: url('../../assets/images/cover.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.filter {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.6;
+}
+
+.caption {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translateY(-25%);
+    transform: translateX(-50%);
+    width: 50%;
+    color: #fff;
+    text-align: center;
+}
+
+.caption button {
+    width: 60%;
+    background: #fff;
+    border-color: #fff;
+    color: #2f2f2f;
+}
+
+.caption button:hover {
+    background: transparent;
+    color: #fff;
+}
+
+.section-title {
+    margin: 75px 0 50px 0;
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    width: 90%;
+    margin: auto auto 25px auto;
+}
+
+.col {
+    margin-bottom: 50px;
+    padding-bottom: 25px;
+    text-align: center;
+}
+
+.col:hover {
+    box-shadow: 0 1px 3px #00000040;
+    transition: .25s;
+}
+
+.col img {
+    display: block;
+    width: 175px;
+    margin: auto;
+}
+
+.col .info {
+    width: 60%;
+    margin: auto;
+    padding: 0;
+    background: #f7f7f7;
+}
+
+.col h3 {
+    margin: 0;
+    padding-top: 15px;
+}
+
+.col .make {
+    padding: 10px 0 15px 0;
+    color: #2f2f2f;
+}
+
+.col button {
+    width: 60%;
+    margin-top: 15px;
+}
+
+@media (min-width: 415px) and (max-width: 812px) {
+
+    .caption {
+        width: 75%;
+    }
+
+    .grid {
+        grid-template-columns: 50% 50%;
+    }
+
+    .col:hover {
+        box-shadow: none;
+    }
+
+}
+
+@media (max-width: 414px) {
+
+    .caption {
+        width: 80%;
+    }
+
+    .caption h1 {
+        font-size: 27px;
+    }
+
+    .caption button {
+        width: 80%;
+    }
+
+    .section-title {
+        margin: 50px 0 25px 0;
+    }
+
+    .grid {
+        grid-template-columns: 100%;
+    }
+
+    .col {
+        margin-bottom: 25px;
+    }
+
+    .col:hover {
+        box-shadow: none;
+    }
+
+    .col img {
+        width: 150px;
+    }
+
+    .col .info {
+        width: 75%;
+    }
+
+    .col button {
+        width: 75%;
+    }
+
+}

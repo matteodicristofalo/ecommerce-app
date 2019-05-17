@@ -1,0 +1,73 @@
+.container {
+    margin: 75px 0;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 80%;
+    margin: auto;
+    background: #f7f7f7;
+}
+
+img {
+    display: block;
+    width: 250px;
+    margin: auto;
+}
+
+.col:nth-child(2) {
+    padding: 50px;
+    border-left: 3px solid white;
+}
+
+.title h2 { 
+    margin: 0;
+}
+
+.description {
+    margin: 25px 0;
+    color: #2f2f2f;
+}
+
+.price {
+    margin-bottom: 25px;
+    font-size: 25px;
+}
+
+button {
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+
+    .container {
+        margin: 0;
+    }
+ 
+    .grid {
+        grid-template-columns: 100%;
+        width: 100%;
+        padding: 0;
+        background: #fff;
+    }
+
+    .col:nth-child(1) {
+        padding: 50px 0 25px 0;
+    }
+
+    img {
+        width: 200px;
+    }
+
+    .col:nth-child(2) {
+        padding: 25px 25px 75px 25px;
+        background: #f7f7f7;
+        border-left: none;
+    }
+
+    .title {
+        margin: 25px 0 0 0;
+    }
+
+}

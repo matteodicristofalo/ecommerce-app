@@ -1,0 +1,31 @@
+<div class="container">
+  <h1>Shopping cart</h1>
+  <div class="main-grid">
+    <div class="products">
+      <div class="empty-cart" *ngIf="products && products.length == 0">
+        <h3>The cart is empty</h3>
+      </div>
+      <div *ngFor="let product of products">
+        <div class="grid">
+          <div class="delete-row">
+            <i class="far fa-trash-alt" (click)="removeCart(product)"></i>
+          </div>
+          <div class="col-image">
+            <img src="../../assets/images/{{ product.id }}.jpg">
+          </div>
+          <div class="col-info">
+            <h4>{{ product.make }} {{ product.model }}</h4>
+            <span>Price:</span>
+            <h4 class="price">{{ product.price }} €</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="checkout">
+      <h2>Summary</h2>
+      <span>Total price:</span>
+      <h3 class="price">{{ amount }} $</h3>
+      <button>Checkout</button>
+    </div>
+  </div>
+</div>
